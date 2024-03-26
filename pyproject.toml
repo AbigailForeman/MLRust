@@ -1,0 +1,17 @@
+[build-system]
+requires = ["maturin"]
+build-backend = "maturin"
+
+[tool.maturin]
+name = "my_python_extension"  # The name of your Python extension
+version = "0.1.0"             # Version of your Python extension
+description = "My Python extension built with Rust"
+authors = ["Your Name <your.email@example.com>"]
+
+[package]
+name = "mlrust"               # The name of your Rust package
+version = "0.1.0"             # Version of your Rust package
+edition = "2021"
+
+[dependencies]
+pyo3 = { version = "0.20.3", features = ["extension-module"] }
